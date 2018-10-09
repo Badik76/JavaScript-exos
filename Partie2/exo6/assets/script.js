@@ -31,4 +31,7 @@ var imageId = [  //Association des ID avec le html dans un tableau afin de pouvo
 for (var i = 0; i < imageId.length; i++) { //création de la boucle avec i=image1 imageId.length fait référence au max et nous demandons l'incrémentation automatique jusqu'au max
 imageId[i].addEventListener("mouseover",function(){ //créa de la fonction. avec insertion du [i]à la variable
   this.src = "images/"+[this.id]+"_2.jpg" //on demande à ce que chaques src dans le html soit renvoyé à la même adresse mais avec _2 en plus
+})
+imageId[i].addEventListener("mouseout",function(){ //créa de la fonction. avec insertion du [i]à la variable
+  this.src = "images/"+[this.id]+".jpg" //on demande à ce que chaques src dans le html soit renvoyé à la même adresse mais avec _2 en plus
 })}//fin de la boucle
