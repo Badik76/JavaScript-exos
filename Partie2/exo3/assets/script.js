@@ -1,6 +1,4 @@
-var reponse = prompt("Comment t'appelles-tu ?", "<Entrez ici votre prénom>");
-if( reponse == null ){
-    alert("Vous avez cliqué sur Annuler");
-} else {
-    alert("Bonjour " + reponse + ", ça roule ?");
-}
+var lastname = document.getElementById("lastname")//lien avec le html
+lastname.addEventListener("keypress",function() { //création de la fonction
+  alert(this.value); //ce qui se passera
+});//end of function
