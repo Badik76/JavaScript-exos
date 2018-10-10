@@ -1,16 +1,13 @@
-var lastname = document.getElementById("lastname");
-var firstname = document.getElementById("firstname");
-var city = document.getElementById("city");
-var submit = document.getElementById("submit");
+var password = document.getElementById("password")//asso avec html id=password
+var confirmPassword = document.getElementById("confirmPassword")//asso avec html id=confirmPassword
+var button = document.getElementsByName("button")[0]
 
-submit.addEventListener("click", function(){
-  if (lastname.value !=="" && firstname.value !=="" && city.value !=="") {
-    if (/^[a-zA-Z]+$/.test(lastname.value + firstname.value + city.value)){
-      alert("\Nom : " + lastname.value + "\n" + "\Prénom : " + firstname.value + "\n"+ "\Ville : " + city.value);
-    } else {
-        alert("EPIC FAIL RECOMMENCE");
-      }
-  }  else {
-        alert("Case(s) vide(s)")
-    }
-  })
+button.addEventListener("click", function() {
+  if (password.value!=confirmPassword.value) {
+  password.style.border = "3px solid red"
+  confirmPassword.style.border = "3px solid red"
+    alert("Raté, c'est pas le même mot de passe !")
+} else {
+  password.style.border = "3px solid green"
+  confirmPassword.style.border = "3px solid green"
+}})
